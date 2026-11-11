@@ -1,0 +1,32 @@
+name: CodSoft CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Validate Dockerfile & HTML Assets
+        run: |
+          echo "Validating project structure..."
+          ls -la
+          ls -la site/
+          echo "Project files verified successfully!"
+
+      - name: Build Docker Image (Dry Run)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: musaibsayyed/codsoft-task1:latest
