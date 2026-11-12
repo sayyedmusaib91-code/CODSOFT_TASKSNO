@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # CodSoft DevOps Internship
 
 ## About This Repository
