@@ -1,8 +1,4 @@
-### 2. Task-4-GitHub-Actions/README.md
 
-Is code ko Task 4 ke README.md mein paste karo:
-
-```markdown
 # Task 4: GitHub Actions CI/CD Pipeline
 
 ## Objective
